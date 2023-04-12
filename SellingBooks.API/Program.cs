@@ -1,4 +1,9 @@
+using SellingBooks.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+
+builder.Services.RegisterDb(configuration);
 
 // Add services to the container.
 
